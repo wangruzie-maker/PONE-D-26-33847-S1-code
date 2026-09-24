@@ -1,0 +1,17 @@
+pandas>=1.5
+numpy>=1.23
+scikit-learn>=1.2
+torch>=2.0
+transformers>=4.30
+sentence-transformers>=2.2
+bertopic>=0.15
+umap-learn>=0.5
+hdbscan>=0.8
+optuna>=3.0
+gensim>=4.3
+nltk>=3.8
+matplotlib>=3.7
+seaborn>=0.12
+plotly>=5.0
+openpyxl>=3.1
+tqdm>=4.65

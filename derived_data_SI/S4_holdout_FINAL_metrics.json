@@ -1,0 +1,47 @@
+{
+  "n": 120,
+  "accuracy": 0.8,
+  "macro_f1": 0.7959,
+  "weighted_f1": 0.8058,
+  "per_class": [
+    {
+      "class": "negative",
+      "precision": 0.8947,
+      "recall": 0.8095,
+      "f1": 0.85,
+      "support": 63
+    },
+    {
+      "class": "neutral",
+      "precision": 0.619,
+      "recall": 0.7879,
+      "f1": 0.6933,
+      "support": 33
+    },
+    {
+      "class": "positive",
+      "precision": 0.9048,
+      "recall": 0.7917,
+      "f1": 0.8444,
+      "support": 24
+    }
+  ],
+  "cm": [
+    [
+      51,
+      12,
+      0
+    ],
+    [
+      5,
+      26,
+      2
+    ],
+    [
+      1,
+      4,
+      19
+    ]
+  ],
+  "protocol": "train280/test120 seed42 DistilRoBERTa fine-tuned; final confirmatory eval"
+}

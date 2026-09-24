@@ -1,0 +1,75 @@
+{
+  "n": 400,
+  "accuracy": 0.6575,
+  "macro_f1": 0.6517404372606977,
+  "weighted_f1": 0.6689153664833314,
+  "per_class": [
+    {
+      "class": "negative",
+      "precision": 0.8707482993197279,
+      "recall": 0.6183574879227053,
+      "f1": 0.7231638418079096,
+      "support": 207
+    },
+    {
+      "class": "neutral",
+      "precision": 0.46994535519125685,
+      "recall": 0.7678571428571429,
+      "f1": 0.5830508474576271,
+      "support": 112
+    },
+    {
+      "class": "positive",
+      "precision": 0.7,
+      "recall": 0.6049382716049383,
+      "f1": 0.6490066225165563,
+      "support": 81
+    }
+  ],
+  "confusion_matrix_labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "confusion_matrix": [
+    [
+      128,
+      70,
+      9
+    ],
+    [
+      14,
+      86,
+      12
+    ],
+    [
+      5,
+      27,
+      49
+    ]
+  ],
+  "gold_dist": {
+    "negative": 207,
+    "neutral": 112,
+    "positive": 81
+  },
+  "model_dist": {
+    "neutral": 183,
+    "negative": 147,
+    "positive": 70
+  },
+  "probe": {
+    "policy_kw_n": 21,
+    "n_human_neutral_kw": 4,
+    "n_human_eval_kw": 17,
+    "model_pred_dist_on_human_neutral_kw": {
+      "neutral": 3,
+      "positive": 1
+    },
+    "model_neg_rate_on_human_neutral_kw": 0.0,
+    "model_neg_rate_on_human_eval_kw": 0.4117647058823529,
+    "accuracy_on_kw_subset": 0.5238095238095238
+  },
+  "model_path": "/Volumes/KESU/研究生作业/论文尝试数据/models/distilroberta-finetuned-financial-news-sentiment-analysis",
+  "note": "Predictions re-inferred on the 400-title gold sample only (not full corpus). Domain rows use keyword proxy, not BERTopic IDs."
+}
