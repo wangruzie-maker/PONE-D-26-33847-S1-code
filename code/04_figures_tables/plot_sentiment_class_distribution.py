@@ -9,7 +9,7 @@ from collections import Counter
 import numpy as np  # 添加这行来导入 numpy
 
 # 指定标注数据集路径（CSV 文件）
-csv_path = 'os.environ.get("OUT_SENTI", "outputs/sentiment_integrated.csv")'  # 根据实际情况修改路径
+csv_path = os.environ.get("OUT_SENTI", "outputs/sentiment_integrated.csv")  # 根据实际情况修改路径
 
 # 定义类别标签
 class_labels = ["negative", "neutral", "positive"]

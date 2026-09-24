@@ -11,7 +11,7 @@ from datetime import datetime
 class_values = {"negative": -1, "neutral": 0, "positive": 1}
 
 # 指定标注数据集路径（CSV 文件）
-csv_path = 'os.environ.get("OUT_SENTI", "outputs/sentiment_integrated.csv")'  # 修改为您的 CSV 文件绝对路径
+csv_path = os.environ.get("OUT_SENTI", "outputs/sentiment_integrated.csv")  # 修改为您的 CSV 文件绝对路径
 
 # 尝试多种编码格式读取 CSV 文件
 def read_csv_data(csv_path):

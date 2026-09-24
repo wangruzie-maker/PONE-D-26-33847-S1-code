@@ -7,7 +7,7 @@ import sqlite3
 import re
 
 # 绝对路径
-db_path = 'os.environ.get("CORPUS_DB", "data/corpus.db")'
+db_path = os.environ.get("CORPUS_DB", "data/corpus.db")
 
 # 连接到数据库
 conn = sqlite3.connect(db_path)

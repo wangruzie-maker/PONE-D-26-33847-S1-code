@@ -55,3 +55,17 @@ Stratified **400** titles; holdout **120**: accuracy **0.80**, macro-F1 **0.80**
 ## Reproducibility note
 
 Scripts come from the original Windows analysis environment; drive letters were replaced with environment variables. Re-fitting BERTopic with newer package versions may change topic IDs; primary deposited outputs are the derived tables.
+
+## Coverage vs manuscript pipeline
+
+Included (historical analysis scripts):
+- DistilRoBERTa title inference (`code/02_sentiment/`)
+- VADER lexicon check
+- BERTopic fit / visualization / Optuna UMAP–HDBSCAN search (`code/03_bertopic/`)
+- Basic sentiment plots
+- Revision probe sampling + holdout eval (`code/05_revision_probe/`)
+
+Not a one-click reproduction of every manuscript table/figure:
+- Outlet-specific final parameters (NYT/CNN/WP) are reported in the paper; scripts search or accept CLI args rather than hard-coding all three final configs in one driver.
+- Probability-weighted / high-confidence robustness tables and Figure 3–5 assembly were produced from exported CSVs in interactive steps that are only partially reflected here.
+- Scripts are research prototypes (hard-coded table names, mixed comments); they document the methods used, not a polished package API.

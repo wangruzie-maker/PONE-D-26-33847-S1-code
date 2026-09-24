@@ -51,7 +51,7 @@ def remove_duplicates(source_db_path, target_db_path, table_name):
 
 
 # 使用函数，指定源数据库路径、目标数据库路径和表名
-source_db_path = 'os.environ.get("CORPUS_DB", "data/corpus.db")'
+source_db_path = os.environ.get("CORPUS_DB", "data/corpus.db")
 target_db_path = 'E:/datanews.db'
 table_name = 'wpnews'
 remove_duplicates(source_db_path, target_db_path, table_name)

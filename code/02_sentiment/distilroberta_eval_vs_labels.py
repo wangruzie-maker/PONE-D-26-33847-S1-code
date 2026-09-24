@@ -15,16 +15,16 @@ import string
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
 # 指定本地模型路径
-model_path = 'os.environ.get("SENTIMENT_MODEL", "models/distilroberta-finetuned-financial-news-sentiment-analysis")'
+model_path = os.environ.get("SENTIMENT_MODEL", "models/distilroberta-finetuned-financial-news-sentiment-analysis")
 
 # 指定数据库路径
-db_path = 'os.environ.get("CORPUS_DB", "data/corpus.db")'
+db_path = os.environ.get("CORPUS_DB", "data/corpus.db")
 
 # 指定导出文件路径
-output_path = 'os.environ.get("OUT_SENTI", "outputs/senti.csv")'
+output_path = os.environ.get("OUT_SENTI", "outputs/senti.csv")
 
 # 指定标注数据集路径
-label_path = 'os.environ.get("LABEL_CSV", "data/label_test.csv")'
+label_path = os.environ.get("LABEL_CSV", "data/label_test.csv")
 
 # 加载预训练的情感分析模型
 tokenizer = AutoTokenizer.from_pretrained(model_path)

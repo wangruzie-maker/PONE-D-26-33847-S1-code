@@ -28,8 +28,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 # 设置路径和其他配置
 db_path = r'os.environ.get("CORPUS_DB", "data/corpus.db")'
 table_name = 'my_existing_table'
-evaluation_results_path = 'os.environ.get("OUT_EVAL", "outputs/topic_eval.csv")'
-output_file_path = 'os.environ.get("OUT_TOPICS", "outputs/topics.csv")'
+evaluation_results_path = os.environ.get("OUT_EVAL", "outputs/topic_eval.csv")
+output_file_path = os.environ.get("OUT_TOPICS", "outputs/topics.csv")
 nltk_data_path = r'os.environ.get("NLTK_DATA", "models/nltk_data")'
 sentence_bert_model_path = r'os.environ.get("EMBEDDING_MODEL", "models/all-MiniLM-L6-v2")'
 
