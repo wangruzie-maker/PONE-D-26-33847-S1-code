@@ -1,27 +1,14 @@
-# S1 是什么、交什么、不交什么
+# 中文提交说明（详见英文 README）
 
-## S1 File 是什么？
+完整英文说明见根目录 `README.md` 与 `code/06_retrieval_sensitivity/PROTOCOL_retrieval_sensitivity.md`。
 
-正文 Code availability 写的 Supporting Information **S1 File**：作者自编分析代码包。期刊 J3 要求发表后**无限制公开**代码。
+本次仓库更新要点：
 
-## 导师初投时传过吗？
+1. **情感人工探针（正文 §3.2 / Table 1）**  
+   400 条分层金标准；280 仅用于核实训练适配；120 留作最终评价；分类别 Precision / Recall / F1 见 `derived_data_SI/S4_holdout_FINAL_metrics.json`；编码规则与 κ=0.74 见英文 README。
 
-初投系统里可能挂过一版。**返修仍建议重新上传本包**（路径已改、并补了 N=400 探针脚本与衍生表）。是否已传以投稿系统附件为准，不要假设导师已更新。
+2. **检索敏感度 1,074 篇（正文 §4.4 / Table 6）**  
+   同标题字段 / 媒体 / 时段；OR 扩展四词组；同 §3.1 清洗；按媒体+日期+规范化标题相对 A 去重。  
+   新增：`derived_data_SI/S5_retrieval_sensitivity_BA_titles.csv`、`S5_retrieval_sensitivity_composition.csv`，以及 `code/06_retrieval_sensitivity/`。
 
-## 要不要交数据库？
-
-**不要交** WiseSearch 全文 / `quchong保护0.db`。按 DAS：他人用许可账号按 §3.1 自建语料。  
-可交 **衍生数据**（本包 `derived_data_SI/`）。
-
-## 要不要交人工打标表？
-
-**建议交**（标题 + 金标准 + 模型标签 / 280·120 划分 / 指标），作为衍生 SI，不是数据库。  
-不要交带全文正文的库。
-
-## 本包从哪来？
-
-- `论文尝试数据/代码`：主分析  
-- `pythonProject1`：Optuna 调参与抽样（「情感模型微调.py」实际是主题调参，未重复收入；`1.py` 已剔除）  
-- 返修目录：分层抽样与 holdout 探针  
-
-投稿：打成 `PONE-D-26-33847_S1_File.zip` 上传；有 GitHub/OSF/Zenodo 更稳妥。
+版权限制：WiseSearch 全文库与本地模型权重仍不上传。
